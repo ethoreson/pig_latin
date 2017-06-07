@@ -8,7 +8,7 @@ var validWord = function(original) {
   };
 };
 
-var singleLetterVowel = function(original) {
+var vowelLogic = function(original) {
   if ((original.length >= 1) && (vowels.includes(original.charAt(0)))) {
     var result = original + "way";
     console.log(result);
@@ -23,22 +23,27 @@ var singleLetterConsonant = function(original) {
 };
 
 var consonantWork = function(original) {
-  if ((original.length > 1) && (consonants.includes(original.charAt(0)))) {
-      var replace = original.slice(0, 1);
-      minusFirst = original.replace(original.charAt(0), "");
-      var result = minusFirst + replace + "ay";
-      console.log(result);
-  }
-};
+  var index = 0
+  while (index < original.length) {
+    if ((original.length > 1) && (consonants.includes(original.charAt(index)))) {
+      var replace = original.slice(index, 1);
+      var minusFirst = original.replace(original.charAt(index), "");
+      console.log(replace);
+      console.log(minusFirst);
+    }}
+    index += 1
+  var result = minusFirst + replace + "ay";
+  console.log(result);
+  };
 
 // user interface logic
 $(document).ready(function() {
   $("form#pig-latin").submit(function(event) {
     event.preventDefault();
     var original = $("input#original").val();
-    validWord(original);
-    singleLetterVowel(original);
-    singleLetterConsonant(original);
+//    validWord(original);
+//    vowelLogic(original);
+//    singleLetterConsonant(original);
     consonantWork(original);
     $("#result").show();
   });

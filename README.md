@@ -22,9 +22,9 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
   Example Input: r
   Example output: ray
 
-The program treats 'y' as a consonant if it is the first character.
-Example Input: yak
-Example Output: akyay
+  The program treats 'y' as a consonant if it is the first character.
+  Example Input: yak
+  Example Output: akyay
 
 The program treats 'y' as a vowel in other scenarios.
 Example input: rhythm
