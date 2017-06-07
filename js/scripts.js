@@ -10,22 +10,23 @@ var validWord = function(original) {
 
 var singleLetterVowel = function(original) {
   if ((original.length === 1) && (vowels.includes(original.charAt(0)))) {
-    original + "way";
+    var result = original + "way";
   }
 };
 
 var singleLetterConsonant = function(original) {
   if ((original.length === 1) && (consonants.includes(original.charAt(0)))) {
-    original + "ay";
+    var result = original + "ay";
   }
 };
 
 var consonantWork = function(original) {
   if ((original.length > 1) && (consonants.includes(original.charAt(0)))) {
       var replace = original.slice(0, 1);
+      minusFirst = original.replace(original.charAt(0), "");
       console.log(replace);
-      console.log(original);
-      console.log(original + replace + "ay");
+      console.log(minusFirst);
+      console.log(minusFirst + replace + "ay");
   }
 };
 
@@ -37,6 +38,7 @@ $(document).ready(function() {
     validWord(original);
     singleLetterVowel(original);
     singleLetterConsonant(original);
+    consonantWork(original);
     $("#result").show();
   });
 });
