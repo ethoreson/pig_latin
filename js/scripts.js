@@ -23,18 +23,16 @@ var singleLetterConsonant = function(original) {
 };
 
 var consonantWork = function(original) {
-  var index = 0
-  while (index < original.length) {
-    if ((original.length > 1) && (consonants.includes(original.charAt(index)))) {
-      var replace = original.slice(index, 1);
-      var minusFirst = original.replace(original.charAt(index), "");
-      console.log(replace);
-      console.log(minusFirst);
-    }}
-    index += 1
-  var result = minusFirst + replace + "ay";
+  while (consonants.includes(original.charAt(0)) === true) {
+    if ((original.length > 1) && (consonants.includes(original.charAt(0)))) {
+      var replace = original.slice(0, 1);
+      var minusFirst = original.replace(original.charAt(0), "");
+      var original = minusFirst + replace;
+    }
+  }
+  result = original + "ay";
   console.log(result);
-  };
+}
 
 // user interface logic
 $(document).ready(function() {
