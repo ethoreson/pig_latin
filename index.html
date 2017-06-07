@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Latin Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pig Latin Generator</h1>
+
+      <form id="pig-latin">
+        <div class="form-group">
+          <label for="original">Enter word here:</label>
+          <input id="original" type="text">
+        </div>
+
+        <button type="submit" class="btn">Translate!</button>
+      </form>
+
+      <div id="result">
+        <p><span class="pig-latinized"></span>.</p>
+      </div>
+      <div id="invalid">
+        <p>Invalid entry. Input must contain only letters.</p>
+      </div>
+    </div>
+  </body>
+</html>
