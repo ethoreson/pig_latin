@@ -10,17 +10,17 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 ## SPECS:
 
-The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels.
-Example Input: 3
-Example Output: 3
+  The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels.
+  Example Input: 3
+  Example Output: 3
 
-The program adds "ay" to single-letter words beginning with a vowel.
-Example Input: i
-Example Output: iway
+  The program adds "way" to single-letter words beginning with a vowel.
+  Example Input: i
+  Example Output: iway
 
-The program adds "ay" to single-letter words beginning with a consonant.
-Example Input: r
-Example output: ray
+  The program adds "ay" to single-letter words beginning with a consonant.
+  Example Input: r
+  Example output: ray
 
 The program treats 'y' as a consonant if it is the first character.
 Example Input: yak
