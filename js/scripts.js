@@ -9,14 +9,16 @@ var validWord = function(original) {
 };
 
 var singleLetterVowel = function(original) {
-  if ((original.length === 1) && (vowels.includes(original.charAt(0)))) {
+  if ((original.length >= 1) && (vowels.includes(original.charAt(0)))) {
     var result = original + "way";
+    console.log(result);
   }
 };
 
 var singleLetterConsonant = function(original) {
   if ((original.length === 1) && (consonants.includes(original.charAt(0)))) {
     var result = original + "ay";
+    console.log(result);
   }
 };
 
@@ -24,9 +26,8 @@ var consonantWork = function(original) {
   if ((original.length > 1) && (consonants.includes(original.charAt(0)))) {
       var replace = original.slice(0, 1);
       minusFirst = original.replace(original.charAt(0), "");
-      console.log(replace);
-      console.log(minusFirst);
-      console.log(minusFirst + replace + "ay");
+      var result = minusFirst + replace + "ay";
+      console.log(result);
   }
 };
 
